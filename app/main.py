@@ -1,20 +1,12 @@
 from fastapi import FastAPI
-from app.model import load_model
-from app.schemas import IrisFeatures
-import numpy as np
+from app.routes.predict import router as predict_router
 
-app = FastAPI()
+app = FastAPI(
+    title="Iris Classification API",
+    description="This API performs the classification of the Iris flower species based on its features.",
+    version="1.0.0"
+)
 
-# Cargar el modelo entrenado al iniciar la aplicación
-model = load_model()
-
-@app.get("/")
-def read_root():
-    return {"message": "Bienvenido a la API de clasificación del Iris"}
-
-@app.post("/predict")
-def predict(features: IrisFeatures):
-    data = np.array([[features.sepal_length, features.sepal_width, features.petal_length, features.petal_width]])
-    prediction = model.predict(data)
-    return {"class": int(prediction[0])}
+# Include the prediction routes
+app.include_router(predict_router)
 

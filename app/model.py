@@ -9,20 +9,20 @@ def train_and_save_model():
     X = iris.data
     y = iris.target
 
-    # Dividir los datos en conjuntos de entrenamiento y prueba
+    # Divide the dataset into training and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Crear y entrenar el modelo
+    # Create and train the decision tree classifier
     clf = DecisionTreeClassifier()
     clf.fit(X_train, y_train)
 
-    print("Directorio actual:", os.getcwd())
+    # print("Actual directory:", os.getcwd())
 
 
-    # Guardar el modelo entrenado
+    # Save the trained model to a file .pkl
     joblib.dump(clf, "model.pkl")
 
 def load_model():
-    print("Directorio actual para load:", os.getcwd())
+    # print("Actual directory of load:", os.getcwd())
     return joblib.load("model.pkl")
 
