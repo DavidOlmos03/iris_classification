@@ -2,7 +2,6 @@ import joblib
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-import os
 
 def train_and_save_model():
     iris = datasets.load_iris()
@@ -23,7 +22,6 @@ def train_and_save_model():
     print("Model saved to file model.pkl")
 
 def load_model():
-    # print("Actual directory of load:", os.getcwd())
     print("Model loaded from file model.pkl")
     return joblib.load("model.pkl")
 
