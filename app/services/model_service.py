@@ -1,8 +1,10 @@
 import numpy as np
-from app.model import load_model
+from app.model import load_model, train_and_save_model
 from app.schemas import IrisFeatures
 
+
 # Load model, only once at startup app
+train_and_save_model()
 model = load_model()
 
 def get_model_prediction(features: IrisFeatures) -> int:

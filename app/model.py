@@ -16,13 +16,15 @@ def train_and_save_model():
     clf = DecisionTreeClassifier()
     clf.fit(X_train, y_train)
 
-    # print("Actual directory:", os.getcwd())
 
 
     # Save the trained model to a file .pkl
     joblib.dump(clf, "model.pkl")
+    print("Model saved to file model.pkl")
 
 def load_model():
     # print("Actual directory of load:", os.getcwd())
+    print("Model loaded from file model.pkl")
     return joblib.load("model.pkl")
+
 
