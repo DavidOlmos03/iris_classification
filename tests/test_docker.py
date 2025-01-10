@@ -1,5 +1,6 @@
 import subprocess
 import requests
+import time
 
 def test_docker_build():
     result = subprocess.run(["docker", "build", "-t", "iris-api", "."], capture_output=True)
@@ -7,6 +8,9 @@ def test_docker_build():
 
 def test_docker_run():
     subprocess.run(["docker", "run", "-d", "-p", "8000:8000", "--name", "iris-container", "iris-api"], capture_output=True)
+    
+    time.sleep(5)
+
     try:
         response = requests.get("http://localhost:8000/info")
         assert response.status_code == 200
