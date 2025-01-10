@@ -1,0 +1,18 @@
+# ignore some files
+.gitignore
+*.docx
+*.pkl
+
+
+# Ignore virtual environment and cache
+venv
+venv_iris/
+__pycache__
+.pytest_cache/
+
+# Ignore all .log files
+*.log
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
