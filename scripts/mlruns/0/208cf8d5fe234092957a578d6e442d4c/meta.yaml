@@ -1,0 +1,15 @@
+artifact_uri: file:///home/david/Documentos/projects/python/iris_classification/scripts/mlruns/0/208cf8d5fe234092957a578d6e442d4c/artifacts
+end_time: 1736533116827
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 208cf8d5fe234092957a578d6e442d4c
+run_name: DecisionTree
+run_uuid: 208cf8d5fe234092957a578d6e442d4c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736533113938
+status: 3
+tags: []
+user_id: david

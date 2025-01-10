@@ -18,14 +18,18 @@ def read_root():
     return {"message": "Welcome to the Iris classification API - Made by David Olmos"}
 
 
-@router.post("/predict", tags=["Iris Prediction"],
-        description=(
-            "This endpoint performs the classification of the Iris flower "
-            "according to its characteristics.\n"
-        "1. Iris-Setosa\n"
-        "2. Iris-Versicolour\n "
-        "3. Iris-Virginica"
-        ))
+@router.post(
+    "/predict",
+    tags=["Iris Prediction"],
+    description=(
+        "This endpoint performs the classification of the Iris flower "
+        "according to its characteristics.\n\n"
+        "Classification labels:\n"
+        "- 0: Iris-Setosa\n"
+        "- 1: Iris-Versicolor\n"
+        "- 2: Iris-Virginica"
+    )
+)
 def predict(features: IrisFeatures):
     """
     This endpoint performs the classification of the Iris flower according to its characteristics.

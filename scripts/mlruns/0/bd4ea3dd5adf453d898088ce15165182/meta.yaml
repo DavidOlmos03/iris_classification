@@ -1,0 +1,15 @@
+artifact_uri: file:///home/david/Documentos/projects/python/iris_classification/scripts/mlruns/0/bd4ea3dd5adf453d898088ce15165182/artifacts
+end_time: 1736533119464
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bd4ea3dd5adf453d898088ce15165182
+run_name: RandomForest
+run_uuid: bd4ea3dd5adf453d898088ce15165182
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736533116831
+status: 3
+tags: []
+user_id: david

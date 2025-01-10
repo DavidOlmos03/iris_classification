@@ -1,6 +1,6 @@
+# virtualenv
 venv_iris/
-model.pkl
-.env
+.env/
 
 # Virtualenv of poetry
 /venv
@@ -18,3 +18,9 @@ __pycache__/
 # cache files
 *.tmp
 *.swp
+
+# mlflow and models trained
+/mlruns/
+*.pkl
+*.joblib
+.mlflow/
