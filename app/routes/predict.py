@@ -1,3 +1,6 @@
+"""
+    This module contains the FastAPI router for the Iris Prediction API.
+"""
 from fastapi import APIRouter
 from app.schemas import IrisFeatures
 from app.services.model_service import get_model_prediction

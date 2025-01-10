@@ -1,4 +1,9 @@
+"""
+    Module to train and save the model, also to load the model.
+"""
+
 import joblib
+import logging
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
@@ -29,7 +34,7 @@ def train_and_save_model():
 
     # Save the trained model to a file .pkl
     joblib.dump(clf, "model.pkl")
-    print("Model saved to file model.pkl")
+    logging.info('Model saved to file model.pkl')
 
 def load_model():
     """
@@ -38,5 +43,5 @@ def load_model():
     Returns:
         Any: The model loaded from the file 'model.pkl'.
     """
-    print("Model loaded from file model.pkl")
+    logging.info('Model loaded from file model.pkl')
     return joblib.load("model.pkl")

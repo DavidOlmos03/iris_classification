@@ -1,3 +1,7 @@
+"""
+    This module contains the functions for the Iris Prediction API.
+"""
+
 import numpy as np
 from app.model import load_model, train_and_save_model
 from app.schemas import IrisFeatures
