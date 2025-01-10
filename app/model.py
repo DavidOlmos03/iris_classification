@@ -15,8 +15,6 @@ def train_and_save_model():
     clf = DecisionTreeClassifier()
     clf.fit(X_train, y_train)
 
-
-
     # Save the trained model to a file .pkl
     joblib.dump(clf, "model.pkl")
     print("Model saved to file model.pkl")

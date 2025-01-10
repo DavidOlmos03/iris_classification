@@ -17,3 +17,4 @@ def read_root():
 def predict(features: IrisFeatures):
     prediction = get_model_prediction(features)
     return {"class": prediction}
+    
