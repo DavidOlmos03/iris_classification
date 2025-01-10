@@ -1,3 +1,20 @@
 venv_iris/
-__pycache__/
 model.pkl
+.env
+
+# Virtualenv of poetry
+/venv
+/root/.cache/pypoetry
+
+# files created
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# logs files
+*.log
+
+# cache files
+*.tmp
+*.swp
